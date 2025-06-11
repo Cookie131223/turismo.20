@@ -35,9 +35,12 @@ $destinos = [
 <body>
     <header>
         <nav style="display: flex; justify-content: space-between; align-items: center; padding: 1rem;">
-            <div>
+           <div>
                 <a href="index.php">Home</a>
                 <a href="#">Destinos</a>
+                <?php if (isset($_SESSION['user_id'])): /* */?>
+                    <a href="minhas_reservas.php">Minhas Reservas</a>
+                <?php endif; /* */?>
             </div>
             <div>
                 <?php if (isset($_SESSION['user_id'])): ?>
